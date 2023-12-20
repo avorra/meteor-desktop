@@ -26,6 +26,7 @@
     "publish-all": "npm run publish-plugins && npm publish && meteor npm i",
     "publish-all-preview": "npm run publish-plugins && npm publish --tag preview && meteor npm i",
     "build": "babel lib --out-dir dist --source-maps inline --copy-files",
+    "prepare": "npm run build",
     "build-watch": "babel lib --watch --out-dir dist --source-maps inline --copy-files",
     "develop": "npm-run-all --parallel build-watch test-watch",
     "generate-docs": "jsdoc2md skeleton/preload.js > docs/api/desktop.md && jsdoc2md skeleton/modules/module.js > docs/api/module.md",
